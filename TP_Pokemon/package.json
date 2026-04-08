@@ -1,0 +1,20 @@
+{
+  "name": "pokemon-game",
+  "version": "1.0.0",
+  "description": "Mini jeu Pokémon en CLI avec PokéAPI",
+  "main": "index.js",
+  "bin": {
+    "pokemon": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "inquirer": "^8.2.6"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
