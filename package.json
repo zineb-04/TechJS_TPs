@@ -1,0 +1,23 @@
+{
+  "name": "tp_noter_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+  "build": "tsc",
+  "start": "node server.js"
+}
+,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.6.2"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}

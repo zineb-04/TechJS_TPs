@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Reading Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <main class="max-w-6xl mx-auto p-6">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">
+      Book Reading Tracker
+    </h1>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Ajouter un livre</h2>
+
+        <p id="message"></p>
+
+        <form id="bookForm" class="space-y-4">
+          <input id="title" type="text" placeholder="Titre" required class="w-full border rounded px-3 py-2" />
+          <input id="author" type="text" placeholder="Auteur" required class="w-full border rounded px-3 py-2" />
+          <input id="numberOfPages" type="number" min="1" placeholder="Nombre de pages" required class="w-full border rounded px-3 py-2" />
+
+          <select id="status" required class="w-full border rounded px-3 py-2">
+            <option value="Read">Read</option>
+            <option value="Re-read">Re-read</option>
+            <option value="DNF">DNF</option>
+            <option value="Currently reading">Currently reading</option>
+            <option value="Returned Unread">Returned Unread</option>
+            <option value="Want to read">Want to read</option>
+          </select>
+
+          <input id="price" type="number" min="0" step="0.01" placeholder="Prix" required class="w-full border rounded px-3 py-2" />
+          <input id="pagesRead" type="number" min="0" placeholder="Pages lues" required class="w-full border rounded px-3 py-2" />
+
+          <select id="format" required class="w-full border rounded px-3 py-2">
+            <option value="Print">Print</option>
+            <option value="PDF">PDF</option>
+            <option value="Ebook">Ebook</option>
+            <option value="AudioBook">AudioBook</option>
+          </select>
+
+          <input id="suggestedBy" type="text" placeholder="Suggéré par" class="w-full border rounded px-3 py-2" />
+
+          <button id="submitButton" type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded font-semibold">
+            Ajouter
+          </button>
+        </form>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Statistiques globales</h2>
+
+        <div class="bg-green-100 p-5 rounded-lg mb-4">
+          <p class="text-gray-600">Total des livres lus</p>
+          <p id="totalFinishedBooks" class="text-4xl font-bold text-green-700">0</p>
+        </div>
+
+        <div class="bg-blue-100 p-5 rounded-lg">
+          <p class="text-gray-600">Total des pages lues</p>
+          <p id="totalPagesRead" class="text-4xl font-bold text-blue-700">0</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Liste des livres</h2>
+      <div id="booksList" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+    </section>
+  </main>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
